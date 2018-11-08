@@ -25,7 +25,7 @@ public class PollController {
 
     protected void verifyPoll(Long pollId) throws ResourceNotFoundException {
         pollRepository.findById(pollId);
-        if(pollId == null) {
+        if(pollId.equals(pollId)) {
             throw new ResourceNotFoundException("Poll with id " + pollId + " not found");
         }
     }
